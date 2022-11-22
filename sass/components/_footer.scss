@@ -1,0 +1,44 @@
+.footer {
+  background-color: $dark-bg;
+  padding: 60px 0;
+
+  &__logo {
+    color: $second-text-color;
+    margin-bottom: 20px;
+  }
+  &__container {
+    display: flex;
+    list-style: none;
+    align-items: baseline;
+    @media screen and (max-width: 767px) {
+      gap: 60px;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      flex-wrap: wrap;
+      justify-content: center;
+
+      text-align: center;
+      gap: 60px;
+    }
+
+    &:not(:last-child) {
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        gap: 20px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__container {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    gap: 60px;
+  }
+}

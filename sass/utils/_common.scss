@@ -1,0 +1,108 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: $third-text-color;
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.link {
+  text-decoration: none;
+}
+.list {
+  list-style: none;
+}
+.section {
+  padding: 94px 0px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  @include breakpoint(mobile) {
+    width: $mobile;
+  }
+  @include breakpoint(tablet) {
+    width: $tablet;
+  }
+  @include breakpoint(desktop) {
+    width: $desktop;
+  }
+}
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.03em;
+  color: $logo-part-color;
+
+  display: block;
+
+  @include breakpoint(desktop) {
+    font-size: 26px;
+    line-height: calc(31 / 26);
+  }
+}
+.button {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  letter-spacing: 0.06em;
+  color: $second-text-color;
+  background: $bg-btn;
+
+  border-radius: 4px;
+  border: transparent;
+  cursor: pointer;
+
+  transition-property: background-color, box-shadow;
+  transition-duration: $trans-dur;
+  transition-timing-function: $trans-tf;
+}
+.button:hover,
+.button:focus {
+  background-color: $hover-bg-btn;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.suptitle {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 0.03em;
+
+  color: $main-text-color;
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+.social-icons__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}

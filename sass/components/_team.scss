@@ -1,0 +1,86 @@
+.team {
+  background-color: $other-bg;
+  padding: 60px 0;
+
+  @include breakpoint(desktop) {
+    padding: 94px 0;
+  }
+  &__suptitle {
+    margin-bottom: $indent;
+    font-size: 28px;
+    line-height: calc(33 / 28);
+
+    @include breakpoint(desktop) {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: calc(42 / 36);
+    }
+  }
+}
+.team-list {
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $indent;
+  }
+  @include breakpoint(mobile-max) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  &__item {
+    background: $light-bg;
+    text-align: center;
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    width: 270px;
+    /* padding-bottom: 30px; */
+    @media screen and (min-width:480px){
+        width: 100%;
+    }
+
+    @include breakpoint(tablet) {
+      $items: 2;
+      flex-basis: calc((100% - $indent * ($items - 1)) / $items);
+    }
+
+    @include breakpoint(desktop) {
+      $items: 4;
+      flex-basis: calc((100% - $indent * ($items - 1)) / $items);
+    }
+
+    &:not(:last-child) {
+      @include breakpoint(mobile-max) {
+        display: block;
+        margin-bottom: $indent;
+      }
+    }
+  }
+  &__caption {
+    font-weight: 500;
+
+    font-size: 16px;
+    line-height: calc(19 / 16);
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $main-text-color;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  &__profession {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: calc(19 / 16);
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $third-text-color;
+  }
+}

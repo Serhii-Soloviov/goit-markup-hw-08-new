@@ -1,0 +1,16 @@
+.header {
+  @include breakpoint(mobile-max) {
+    padding: 10px 0;
+  }
+  background-color: $light-bg;
+  border-bottom: 1px solid $header-border-bot-color;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    color: $logo-text-color;
+  }
+}

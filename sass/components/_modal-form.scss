@@ -1,0 +1,23 @@
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+
+  &__title {
+    font-size: 20px;
+    line-height: calc(23 / 20);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $main-text-color;
+    margin-bottom: 12px;
+  }
+  &__button {
+    text-align: center;
+    display: block;
+    padding: 10px 52px;
+    margin: 0 auto;
+  }
+}

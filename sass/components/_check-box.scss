@@ -1,0 +1,47 @@
+.check-box {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__label {
+  font-size: 14px;
+  line-height: calc(24/14);
+  letter-spacing: 0.03em;
+  color: $third-text-color;
+  display: flex;
+  align-items: center;
+}
+&__label::before {
+  cursor: pointer;
+  display: block;
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid $logo-text-color;
+  border-radius: 2px;
+  margin-right: 7px;
+
+  transition-property: border-color;
+  transition-duration: $trans-dur;
+  transition-timing-function: $trans-tf;
+}
+&__input:focus + &__label::before {
+  border: 2px solid $bg-btn;
+}
+&__input:checked + &__label::before {
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+
+  transition-property: background-image;
+  transition-duration: $trans-dur;
+  transition-timing-function: $trans-tf;
+}
+&__link {
+  color: $hover-text-color;
+  text-decoration: underline;
+}
+}
+

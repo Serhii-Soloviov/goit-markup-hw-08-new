@@ -1,0 +1,32 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+svg {
+  margin: 0;
+  padding: 0;
+  fill: currentColor;
+}
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+

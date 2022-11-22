@@ -1,0 +1,40 @@
+.address-holder {
+  @media screen and (min-width: 767px) and (max-width: 1199px) {
+    flex: 0 0 calc(50% - 30px);
+  }
+}
+.address {
+  margin-top: 20px;
+
+  &__list {
+    display: block;
+  }
+  &__item {
+    height: 21px;
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 8px;
+    @include breakpoint(desktop) {
+      margin-bottom: 9px;
+    }
+  }
+  &__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 0.03em;
+    color: $address-link-color;
+    transition-property: color;
+    transition-duration: $trans-dur;
+    transition-timing-function: $trans-tf;
+  }
+  &__link--location {
+    color: $second-text-color;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $hover-text-color;
+  }
+}
